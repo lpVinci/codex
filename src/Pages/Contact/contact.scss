@@ -1,0 +1,55 @@
+img {
+  width: 75px;
+}
+
+.containerContact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+
+    li {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+
+      p {
+        padding: 10px;
+
+        font-weight: 600;
+        letter-spacing: 2px;
+
+        position: relative;
+
+        right: 5rem;
+        color: transparent;
+        transition: 0.5s;
+
+        a {
+          color: transparent;
+          text-decoration: none;
+        }
+      }
+    }
+
+    li:hover {
+      p {
+        color: white;
+        right: 0;
+        transition: 0.5s;
+        cursor: pointer;
+
+        text-shadow: 1px 1px 3px rgb(148, 221, 255);
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

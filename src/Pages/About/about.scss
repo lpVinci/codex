@@ -1,0 +1,255 @@
+.container-about {
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  width: 32em;
+  text-align: center;
+  overflow: hidden;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+
+  a:hover {
+    transition: 0.5s;
+    font-weight: 900;
+    background-color: rgba(255, 255, 255, 0.158);
+    box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.158);
+  }
+}
+
+.slides {
+  display: flex;
+  align-items: center;
+  height: 35em;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  color: black;
+
+  /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+}
+.slides::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.slides::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+  background: transparent;
+}
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 5em;
+  height: 5em;
+  margin-right: 50px;
+  border-radius: 10px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 51, 128, 0.507),
+    rgba(0, 217, 255, 0.514),
+    rgba(0, 255, 200, 0.445)
+  );
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.589);
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 100px;
+}
+.slides > div:target {
+  /*   transform: scale(0.8); */
+}
+.author-info {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+}
+.author-info a {
+  color: black;
+}
+
+.img {
+  object-fit: cover;
+  width: 70px;
+  transition: 0.5s;
+}
+
+.row {
+  display: flex;
+}
+
+.nodes {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nodes:hover {
+  .img {
+    width: 75px;
+    transition: 0.5s;
+  }
+
+  .names {
+    font-weight: 600;
+    color: rgb(196, 196, 196);
+    transition: 0.5s;
+
+    position: relative;
+    top: 0px;
+  }
+}
+
+.names {
+  font-weight: 600;
+  color: transparent;
+  transition: 0.5s;
+
+  position: relative;
+  top: 30px;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0.5rem;
+  position: relative;
+}
+.slider > a:active {
+  top: 1px;
+}
+.slider > a:focus {
+  background: #000;
+}
+
+.slides {
+  .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: medium;
+  }
+
+  .lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #5fccff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+/* Don't need button navigation */

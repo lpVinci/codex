@@ -1,0 +1,39 @@
+* {
+  margin: 0%;
+}
+
+.containerNav {
+  background: transparent;
+
+  height: 6em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      padding: 1rem;
+
+      .about,
+      .home,
+      .contact {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        font-size: large;
+        transition: 1s;
+      }
+
+      .a:hover {
+        font-size: larger;
+        letter-spacing: 2px;
+        transition: 1s;
+        color: rgb(198, 255, 255);
+      }
+    }
+  }
+}
